@@ -9,16 +9,10 @@ npm init -y
 in your project's root directory and following the prompts.
 
 # Install TypeScript
-Install TypeScript as a development dependency using npm or yarn:
+Install TypeScript as a development dependency using npm or yarn and type definitions for external modules or libraries. These definitions are usually available through the @types scope on npm. 
 
 ```
-npm install typescript --save-dev
-```
-## Install Type Definitions 
-TypeScript often requires type definitions for external modules or libraries. These definitions are usually available through the @types scope on npm. For example, to add type definitions for Node.js:
-
-```
-npm install @types/node --save-dev
+npm install typescript @types/node --save-dev
 ```
 
 # Organize Your Project Structure:
