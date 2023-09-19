@@ -21,10 +21,13 @@ This will create a global symlink for your package.
 
 In the terminal, navigate to the root directory of the project where you want to test your package. Run the following command, replacing your-package-name with the name of your package:
 
+```
 bash
 Copy code
 npm link your-package-name
-Use and Test
+```
+
+### Use and Test
 
 Now, in your consumer project, you can import or require your package just as you would if you had installed it from npm. Since it's a symlink, any changes you make in your local package will immediately reflect in the consumer project.
 
