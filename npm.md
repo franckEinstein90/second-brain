@@ -1,5 +1,69 @@
 Creating an npm package from one of your GitHub repositories can be done in few steps. But first, let's understand what it involves:
 
+# Testing Locally
+Testing your npm package locally in another project before publishing is a wise decision. 
+
+## Method 1: Using npm link
+The npm link command is designed for this exact use-case. It creates a symlink in the global folder, allowing you to use your local package as if it was installed from npm.
+
+### Link Your Package
+
+In the terminal, navigate to the root directory of your npm package (the directory containing the package.json file) and run:
+```
+bash
+Copy code
+npm link
+```
+
+This will create a global symlink for your package.
+
+## Link to Your Package in the Consumer Project
+
+In the terminal, navigate to the root directory of the project where you want to test your package. Run the following command, replacing your-package-name with the name of your package:
+
+bash
+Copy code
+npm link your-package-name
+Use and Test
+
+Now, in your consumer project, you can import or require your package just as you would if you had installed it from npm. Since it's a symlink, any changes you make in your local package will immediately reflect in the consumer project.
+
+Unlinking (Cleanup)
+
+When you're done testing:
+
+Go to your consumer project and run npm unlink your-package-name.
+Then, go to your local package's directory and run npm unlink to remove the global symlink.
+Method 2: Using npm pack
+The npm pack command can generate a tarball of your package, which mimics the format that would be uploaded to the npm registry.
+
+Create a Tarball
+
+In the terminal, navigate to your package directory and run:
+
+bash
+Copy code
+npm pack
+This will create a .tgz file in your directory.
+
+Install the Tarball in the Consumer Project
+
+In the terminal, navigate to your consumer project's directory and run:
+
+bash
+Copy code
+npm install /path-to-your-package-directory/package-name-version.tgz
+This will install your package from the tarball as if it was a regular npm package.
+
+Use and Test
+
+You can now use your package in the consumer project. Note that if you make changes to your package, you'll need to repeat the npm pack and npm install steps to test the latest version.
+
+Additional Tip
+Whenever you make significant changes to the package you're testing, especially involving dependencies, it's a good idea to delete the node_modules folder and package-lock.json (or yarn.lock if you're using Yarn) in the consumer project and then run npm install (or yarn install). This ensures you're testing with a clean slate, similar to how others would experience your package when they install it from npm.
+
+By testing your package locally using one of these methods, you can catch and fix issues before they reach your users, ensuring a smoother experience for everyone.
+# Publishing the package
 GitHub Repository: Your codebase, with all the necessary files and folders required for the npm package.
 npm: npm (node package manager) is a package manager for JavaScript, and is default for Node.js.
 To publish a GitHub repository as an npm package, here's a step-by-step guide:
