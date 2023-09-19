@@ -1,3 +1,26 @@
+Install Dependencies:
+Install the necessary dependencies - mocha, chai, ts-node, and @types/chai. ts-node allows you to run TypeScript files directly without the need to manually compile them to JavaScript.
+
+```
+npm install mocha chai ts-node @types/chai --save-dev
+```
+
+## Create Project Structure:
+Organize your project structure. Typically, you'll have a src directory for your TypeScript source files and a test directory for your test files. If your directory structure is different, adjust the paths accordingly.
+
+Your project structure might look something like this:
+
+```
+project-root/
+
+├── src/
+│   └── main.ts
+├── test/
+│   └── main.test.ts
+└── package.json
+```
+
+
 To write an asynchronous hook that runs before any of your tests begin in a Mocha test file using TypeScript, you can use the before hook.
 
 Here's an example code snippet:
