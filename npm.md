@@ -6,24 +6,25 @@ Testing your npm package locally in another project before publishing is a wise 
 ## Method 1: Using npm link
 The npm link command is designed for this exact use-case. It creates a symlink in the global folder, allowing you to use your local package as if it was installed from npm.
 
-### Link Your Package
+### 1. Create a Symlink to Your Package
 
 In the terminal, navigate to the root directory of your npm package (the directory containing the package.json file) and run:
 ```
-bash
-Copy code
 npm link
 ```
 
-This will create a global symlink for your package.
+This will create a global symlink for your package. Symlinks are used by npm link to reference your local development packages. On Unix-based systems (like Linux and macOS), you can use the find command to list all symlinks:
+```
+cd $(npm root -g)
+find . -type l -maxdepth 1
+```
+This will display all symlinks directly inside the global node_modules directory.
 
-## Link to Your Package in the Consumer Project
+### 2. Link to Your Package in the Consumer Project
 
 In the terminal, navigate to the root directory of the project where you want to test your package. Run the following command, replacing your-package-name with the name of your package:
 
 ```
-bash
-Copy code
 npm link your-package-name
 ```
 
