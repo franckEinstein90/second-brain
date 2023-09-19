@@ -17,17 +17,22 @@ npm install typescript @types/node --save-dev
 
 # Organize Your Project Structure:
 Create a directory structure for your TypeScript source files (.ts) and output JavaScript files (.js). For instance:
+
+
+```
+mkdir dist
+mkdir src
+mkdir test
+echo "console.log('hello world')" > src/main.ts
+touch test/main.test.ts
+```
+
+which should provide you with something similar to: 
 ```
 project-root/
 ├── src/
 │   ├── main.ts
 ├── dist/
-```
-
-```
-mkdir dist
-mkdir src
-echo "console.log('hello world')" > src/main.ts
 ```
 
 # Create a TypeScript Configuration
