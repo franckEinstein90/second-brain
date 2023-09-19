@@ -24,6 +24,12 @@ project-root/
 ├── dist/
 ```
 
+```
+mkdir dist
+mkdir src
+echo "console.log('hello world')" > src/main.ts
+```
+
 # Create a TypeScript Configuration
 Create a tsconfig.json file in the project root. This file specifies how TypeScript should compile your code. You can create a basic configuration using the tsc --init command.
 
