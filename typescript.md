@@ -42,7 +42,8 @@ In the tsconfig.json file, you can customize compiler options according to your 
     "target": "ES6",
     "module": "CommonJS",
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "moduleResolution": "node",  
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
