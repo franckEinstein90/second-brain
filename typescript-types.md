@@ -1,3 +1,32 @@
+# Type Manipulation, Creating Types from other Types
+
+## Partial<Type>
+
+Constructs a type with all properties of Type set to optional. This utility will return a type that represents all subsets of a given type. Here's a use case:
+
+```
+interface Todo {
+  title: string;
+  description: string;
+}
+ 
+const updateTodo = (todo: Todo, fieldsToUpdate: Partial<Todo>): Todo => {
+  return { ...todo, ...fieldsToUpdate };
+}
+```
+
+ ```
+const todo1 = {
+  title: "organize desk",
+  description: "clear clutter",
+};
+ 
+const todo2 = updateTodo(todo1, {
+  description: "throw out trash",
+});
+```
+
+
 ## keys of an object 
 
 In TypeScript (and JavaScript), you can get the keys of an object using the Object.keys() method. It returns an array of strings that represent all the enumerable properties of the given object.
