@@ -1,12 +1,35 @@
-Creating an npm package from one of your GitHub repositories can be done in few steps. But first, let's understand what it involves:
+## Using npm to create a cli
 
-# Testing Locally
-Testing your npm package locally in another project before publishing is a wise decision. 
+The first step is to add the following key in package.json:
 
-## Method 1: Using npm link
+```
+"bin": {
+    "cli-tool": "./index.js"
+}
+```
+
+"cli-tool" is the name of the command being created. It is pointing it at index.js, our main point of entry.
+This step is not just important for testing the tool, but also for publishing it later on. So, make sure to add it.
+
+## Install the package globally on Local
+```
+npm i -g
+```
+Now, run the tool right from the terminal:
+
+```
+todos --help
+```
+
+
+# Create an npm package
+
+##Step 1:  Local Testing
+
+### Local Testing Using npm link
 The npm link command is designed for this exact use-case. It creates a symlink in the global folder, allowing you to use your local package as if it was installed from npm.
 
-### 1. Create a Symlink to Your Package
+#### 1. Create a Symlink to Your Package
 
 In the terminal, navigate to the root directory of your npm package (the directory containing the package.json file) and run:
 ```
@@ -20,7 +43,7 @@ find . -type l -maxdepth 1
 ```
 This will display all symlinks directly inside the global node_modules directory.
 
-### 2. Link to Your Package in the Consumer Project
+#### 2. Link to Your Package in the Consumer Project
 
 In the terminal, navigate to the root directory of the project where you want to test your package. Run the following command, replacing your-package-name with the name of your package:
 
@@ -28,7 +51,7 @@ In the terminal, navigate to the root directory of the project where you want to
 npm link your-package-name
 ```
 
-### Use and Test
+#### Use and Test
 
 Now, in your consumer project, you can import or require your package just as you would if you had installed it from npm. Since it's a symlink, any changes you make in your local package will immediately reflect in the consumer project.
 
