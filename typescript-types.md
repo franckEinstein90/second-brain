@@ -1,4 +1,37 @@
-In typescript, I have an object defined as such: 
+## keys of an object 
+
+In TypeScript (and JavaScript), you can get the keys of an object using the Object.keys() method. It returns an array of strings that represent all the enumerable properties of the given object.
+
+Here's a simple example:
+
+```
+const obj = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+```
+```
+const keys = Object.keys(obj);
+console.log(keys);  // ["a", "b", "c"]
+```
+
+## keyof Operator
+In TypeScript, if you want to ensure that the keys are typed correctly (i.e., are the actual keys of the object and not just strings), you can use the keyof type operator in combination with type assertion:
+
+```
+const obj = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+```
+```
+const keys = Object.keys(obj) as (keyof typeof obj)[];
+console.log(keys);  // ["a", "b", "c"]
+```
+
+Here, (keyof typeof obj)[] asserts that the resulting array from Object.keys(obj) consists of the keys of obj.
 
 export const DATABASE_INIT_MODE = {
     updateExisting: true,
@@ -68,33 +101,3 @@ This approach uses simple conditional statements to determine the property passe
 
 
 
-User
-how do I get the keys of an object? 
-ChatGPT
-In TypeScript (and JavaScript), you can get the keys of an object using the Object.keys() method. It returns an array of strings that represent all the enumerable properties of the given object.
-
-Here's a simple example:
-
-typescript
-Copy code
-const obj = {
-    a: 1,
-    b: 2,
-    c: 3
-};
-
-const keys = Object.keys(obj);
-console.log(keys);  // ["a", "b", "c"]
-In TypeScript, if you want to ensure that the keys are typed correctly (i.e., are the actual keys of the object and not just strings), you can use the keyof type operator in combination with type assertion:
-
-typescript
-Copy code
-const obj = {
-    a: 1,
-    b: 2,
-    c: 3
-};
-
-const keys = Object.keys(obj) as (keyof typeof obj)[];
-console.log(keys);  // ["a", "b", "c"]
-Here, (keyof typeof obj)[] asserts that the resulting array from Object.keys(obj) consists of the keys of obj.
