@@ -3,7 +3,7 @@
 # Create an npm package
 
 
-## Step One: Export types, functions, and classes
+## Step One: Export Types, Interfaces, Functions, and Classes
 
 Export in the resources you want to explose in your src/main.ts like so:
 ```
