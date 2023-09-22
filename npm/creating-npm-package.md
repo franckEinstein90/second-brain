@@ -3,7 +3,9 @@
 # Create an npm package
 
 
-## Step One: Export the types, functions, and classes you want to export in src/main.ts like so:
+## Step One: Export types, functions, and classes
+
+Export in the resources you want to explose in your src/main.ts like so:
 ```
 ...
 export { blockBobby } from './block-bobby';
