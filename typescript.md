@@ -1,6 +1,7 @@
-Integrating TypeScript into a Node.js project involves several steps to enable you to write and compile TypeScript code that runs on the Node.js runtime. Here's a step-by-step guide:
 
-# Initialize Your Node.js Project
+# Integrating typescript in a Node.js Project 
+
+## Step One: Initialize Your Node.js Project
 If you haven't already, create a new Node.js project by setting up a package.json file. You can do this by running 
 
 ```
@@ -8,14 +9,14 @@ npm init -y
 ```
 in your project's root directory and following the prompts.
 
-# Install TypeScript
+## Step Two: Install TypeScript
 Install TypeScript as a development dependency using npm or yarn and type definitions for external modules or libraries. These definitions are usually available through the @types scope on npm. 
 
 ```
 npm install typescript @types/node --save-dev
 ```
 
-# Organize Your Project Structure:
+## Step Three: Create your Project Structure:
 Create a directory structure for your TypeScript source files (.ts) and output JavaScript files (.js). For instance:
 
 
@@ -35,7 +36,7 @@ project-root/
 ├── dist/
 ```
 
-# Create a TypeScript Configuration
+## Step Four: Create a TypeScript Configuration
 Create a tsconfig.json file in the project root. This file specifies how TypeScript should compile your code. You can create a basic configuration using the tsc --init command.
 
 Configure tsconfig.json:
@@ -85,7 +86,8 @@ To automate the compilation process, you can define a build script in your packa
 }
 ```
 
-You can then use npm run build to compile your TypeScript code.
+You can then use npm run build to compile your TypeScript code with: 
 
-
-By following these steps, you'll successfully integrate TypeScript into your Node.js project, allowing you to take advantage of its static typing and other features while still running your code on the Node.js runtime.
+```
+npm run build
+```
