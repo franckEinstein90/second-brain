@@ -2,6 +2,15 @@
 
 # Create an npm package
 
+
+## Step One: Export the types, functions, and classes you want to export in src/main.ts like so:
+```
+...
+export { blockBobby } from './block-bobby';
+export { IFace, FaceOptions} from './types';
+... 
+```
+
 ## Step 1:  Local Testing
 
 ### Local Testing Using npm link
