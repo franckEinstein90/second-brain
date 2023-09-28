@@ -1,7 +1,30 @@
 # Type Manipulation, Creating Types from other Types
 
-## Partial<Type>
+## Type Intersection
+```
+interface ClientRequest {
+  userId:     number
+  sessionKey: string
+}
 
+interface Coords {
+  lat:  number
+  long: number
+}
+
+const log = (data: ClientRequest & Coords) => { 
+  console.log(
+    data.userId,
+    data.sessionKey,
+    data.lat,
+    data.long
+  );
+}
+```
+## Partial Types
+```
+Partial <Type>
+```
 Constructs a type with all properties of Type set to optional. This utility will return a type that represents all subsets of a given type. Here's a use case:
 
 ```
