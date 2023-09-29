@@ -41,7 +41,11 @@ project-root/
 ```
 
 ## Step Four: Create a TypeScript Configuration
-Create a tsconfig.json file in the project root. This file specifies how TypeScript should compile your code. You can create a basic configuration using the tsc --init command.
+Create a tsconfig.json file in the project root. This file specifies how TypeScript should compile your code. You can create a basic configuration using the command: 
+
+```
+tsc --init command.
+```
 
 Configure tsconfig.json:
 In the tsconfig.json file, you can customize compiler options according to your project's needs. Some common options include specifying the output directory, target ECMAScript version, module format, etc. Here's an example of a basic tsconfig.json:
