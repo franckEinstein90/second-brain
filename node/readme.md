@@ -1,5 +1,5 @@
 
-# Integrating typescript in a Node.js Project 
+# New Node.js project with TypeScript  
 ## Step One: Create a repo in either GitHub, BitBucket, or GitLab
 and add a readme.md
 
