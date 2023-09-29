@@ -1,6 +1,7 @@
 # Create an npm package
 
-Start with a basic configuration (see node>readme.md) - checkout the master branch. In the package.json, add the following: 
+Start with a basic configuration (see node>readme.md) 
+checkout the master branch. In the package.json, add the following: 
 ```
  "description": "",
   "main": "dist/main.js",
