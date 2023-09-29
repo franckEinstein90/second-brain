@@ -1,7 +1,6 @@
-
-
 # Create an npm package
 
+Start with a basic configuration (see node>readme.md) - checkout the master branch
 
 ## Step One: Export Types, Interfaces, Functions, and Classes
 
