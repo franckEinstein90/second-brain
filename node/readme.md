@@ -30,6 +30,7 @@ mkdir src
 mkdir test
 echo "console.log('hello world')" > src/main.ts
 touch test/main.test.ts
+echo "dist/" > .gitignore
 ```
 
 which should provide you with something similar to: 
