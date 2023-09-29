@@ -31,6 +31,7 @@ mkdir test
 echo "console.log('hello world')" > src/main.ts
 touch test/main.test.ts
 echo "dist/" > .gitignore
+echo "node_modules/" >> .gitignore
 ```
 
 which should provide you with something similar to: 
@@ -92,4 +93,18 @@ You can then use npm run build to compile your TypeScript code with:
 
 ```
 npm run build
+```
+## Commit your changes: 
+```
+git add .gitignore
+git add package*
+git add test*
+git add src*
+git add tsconfig.json
+git commit -m "first commit"
+git push
+```
+## Create a develop branch
+```
+git branch develop
 ```
