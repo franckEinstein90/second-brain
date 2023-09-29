@@ -1,6 +1,15 @@
 # Create an npm package
 
-Start with a basic configuration (see node>readme.md) - checkout the master branch
+Start with a basic configuration (see node>readme.md) - checkout the master branch. In the package.json, add the following: 
+```
+ "description": "",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+```
 
 ## Step One: Export Types, Interfaces, Functions, and Classes
 
@@ -81,15 +90,10 @@ By testing your package locally using one of these methods, you can catch and fi
 # Publishing the package
 GitHub Repository: Your codebase, with all the necessary files and folders required for the npm package.
 npm: npm (node package manager) is a package manager for JavaScript, and is default for Node.js.
-To publish a GitHub repository as an npm package, here's a step-by-step guide:
 
-Step 1: Prepare Your Repository
+## Step 1: Prepare Your Repository
 The most important thing to have in your repository is a package.json file. This file holds various metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies.
-
-To create a package.json file, go to your project's root directory and run npm init, then follow the prompts. You can also use npm init -y to automatically answer "yes" to the prompts and get an initial package.json.
-
-Step 2: Create Your Package
-Make sure that the repository has all the code you want to include in your npm package. The main entry point of your package should be specified in the main field of package.json.
+The main entry point of your package should be specified in the main field of package.json.
 
 Step 3: Version Your Code
 Ensure that your code is versioned correctly. The version number can be found in the package.json file under the version key. npm uses semantic versioning, or semver, to manage versions.
