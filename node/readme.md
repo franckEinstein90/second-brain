@@ -13,7 +13,22 @@ npm init -y
 ```
 in your project's root directory and following the prompts.
 
-## Step Two: Install TypeScript
+## Step Two: Install TypeScript and tools
+
+Install tsc and ts-node if you don't have them available already: 
+
+```
+# Locally in your project.
+npm install -D typescript
+npm install -D ts-node
+# Or globally with TypeScript.
+npm install -g typescript
+npm install -g ts-node
+# Depending on configuration, you may also need these
+npm install -D tslib @types/node
+```
+
+
 Install TypeScript as a development dependency using npm or yarn and type definitions for external modules or libraries. These definitions are usually available through the @types scope on npm. 
 
 ```
