@@ -61,7 +61,7 @@ project-root/
 Create a tsconfig.json file in the project root. This file specifies how TypeScript should compile your code. You can create a basic configuration using the command: 
 
 ```
-tsc --init command.
+tsc --init
 ```
 
 Configure tsconfig.json:
