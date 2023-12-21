@@ -56,6 +56,9 @@ project-root/
 │   ├── main.ts
 ├── dist/
 ```
+The dist folder will contain the js code that will be the source of your application. The ./src folder contains the Typescript code that you will write and that will transpiled into the js code that will be kept in your ./dist folder. When you "distribute" your code, the code you'll publish or deploy will be the one ./dist. However, there is ts code that you don't want to see end up in your ./dist folder. For instance, you might not want your test code to be distributed, because, why? 
+
+The next step is concerned with how, and which  ts code ends up as js code in ./dist
 
 ## Step Five: Setup TypeScript Configuration
 Create a tsconfig.json file in the project root. This file specifies how TypeScript should compile your code. You can create a basic configuration using the command: 
@@ -80,6 +83,29 @@ node dist/main.js
 ```
 
 You should see "Hello World" output to console.
+
+
+## Step Six, setup your tests
+create a folder ./test, and a file ./test/index.spec.ts, and copy/past this inside:
+
+```
+import { expect } from 'chai';
+
+const add = (a: number, b: number): number => a + b;
+
+describe('add function', () => {
+    it('should add two numbers correctly', () => {
+        expect(add(2, 3)).to.equal(5);
+    });
+
+    // Additional test cases can be added here
+});
+```
+add the following script(s) in your  package.json scripts:
+```
+"test": "mocha -r ts-node/register test/**/*.spec.ts"
+```
+
 
 ## Add to your Build Script:
 To automate the compilation process, you can define a build script in your package.json that runs the TypeScript compiler. Add this to the "scripts" section:
