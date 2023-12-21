@@ -1,0 +1,6 @@
+  "scripts": {
+    "build": "tsc --build",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "test:coverage": "nyc --reporter=html --reporter=text mocha lib/tests/**/*",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts"
+  }
