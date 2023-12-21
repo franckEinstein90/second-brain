@@ -5,7 +5,7 @@ Add a readme.md, and a .gitignore file. Easiest is to create it from the website
 
 ## Step Two: Clone the repo on your local
 
-## Step One: Initialize Your Node.js ProjectC
+## Step Three: Initialize Your Node.js ProjectC
 
 Create a new Node.js project by setting up a package.json file. You can do this by running 
 
@@ -36,7 +36,7 @@ Install TypeScript as a development dependency using npm or yarn and type defini
 npm install typescript @types/node --save-dev
 ```
 
-## Step Three: Create your Project Structure:
+## Step Four: Create your Project Structure:
 Create a directory structure for your TypeScript source files (.ts) and output JavaScript files (.js). For instance:
 
 
@@ -58,7 +58,7 @@ project-root/
 ├── dist/
 ```
 
-## Step Four: Create a TypeScript Configuration
+## Step Five: Setup TypeScript Configuration
 Create a tsconfig.json file in the project root. This file specifies how TypeScript should compile your code. You can create a basic configuration using the command: 
 
 ```
@@ -68,7 +68,7 @@ tsc --init
 Configure tsconfig.json:
 In the tsconfig.json file, you can customize compiler options according to your project's needs. Some common options include specifying the output directory, target ECMAScript version, module format, etc. There is a full example of my typical settings in this folder
 
-## Step Five: Compile TypeScript to JavaScript
+## Step Six: Compile TypeScript to JavaScript
 Run the TypeScript compiler to convert your TypeScript code into JavaScript code:
 
 ```
