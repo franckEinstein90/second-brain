@@ -56,7 +56,7 @@ project-root/
 │   ├── main.ts
 ├── dist/
 ```
-The dist folder will contain the js code that will be the source of your application. The ./src folder contains the Typescript code that you will write and that will transpiled into the js code that will be kept in your ./dist folder. When you "distribute" your code, the code you'll publish or deploy will be the one ./dist. However, there is ts code that you don't want to see end up in your ./dist folder. For instance, you might not want your test code to be distributed, because, why? 
+The dist folder will contain the js code that will be the source of your application. The ./src folder contains the Typescript code that you will write and that will transpiled into the js code that will be kept in your ./dist folder. When you "distribute" your code, the code you'll publish or deploy will be the one ./dist. However, there is ts code that you don't want to see end up in your ./dist folder. For instance, you might not want your test code to be distributed, because, what purpose would that serve? 
 
 The next step is concerned with how, and which  ts code ends up as js code in ./dist
 
