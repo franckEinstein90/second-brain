@@ -5,9 +5,8 @@ Add a readme.md, and a .gitignore file. Easiest is to create it from the website
 
 ## Step Two: Clone the repo on your local
 
-## Step Three: Initialize Your Node.js ProjectC
-
-Create a new Node.js project by setting up a package.json file. You can do this by running 
+## Step Three: Initialize Your Node.js Project
+You now have a workspace for your project, which is a folder on your local and a corresponding repo on git. The two are linked, and you can synch your local file to your remote git repo. That would be the basis for any givien project in any language on any architecture. The next step is to setup a typical nodejs type architecture. We're going to use Typescript for this. The steps for a simple JavaScript project are much simpler, and don't require much instructions beyond this one. Create a new Node.js project by setting up a package.json file. You can do this by running 
 
 ```
 npm init -y
