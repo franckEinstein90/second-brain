@@ -66,21 +66,7 @@ tsc --init
 ```
 
 Configure tsconfig.json:
-In the tsconfig.json file, you can customize compiler options according to your project's needs. Some common options include specifying the output directory, target ECMAScript version, module format, etc. Here's an example of a basic tsconfig.json:
-
-```
-{
-  "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "moduleResolution": "node",  
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
-}
-```
+In the tsconfig.json file, you can customize compiler options according to your project's needs. Some common options include specifying the output directory, target ECMAScript version, module format, etc. There is a full example of my typical settings in this folder
 
 ## Step Five: Compile TypeScript to JavaScript
 Run the TypeScript compiler to convert your TypeScript code into JavaScript code:
